@@ -17,6 +17,7 @@ import { ConfigService } from '@nestjs/config';
 import { EditProfileDto } from './dto/edit-profile.dto';
 import { MarkerColor } from 'src/post/marker-color.enum';
 import axios from 'axios';
+import appleSignin from 'apple-signin-auth';
 
 @Injectable()
 export class AuthService {

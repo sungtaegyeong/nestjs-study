@@ -30,7 +30,7 @@ export class PostController {
 
   @Get('/posts/my')
   getPosts(@Query('page') page: number, @GetUser() user: User) {
-    return this.postService.getPosts(page, user);
+    return this.postService.getMyPosts(page, user);
   }
 
   @Get('/posts/:id')
@@ -66,7 +66,7 @@ export class PostController {
     @Query('month') month: number,
     @GetUser() user: User,
   ) {
-    return this.postService.getPostByMonth(year, month, user);
+    return this.postService.getPostsByMonth(year, month, user);
   }
 
   @Get('/posts/my/search')

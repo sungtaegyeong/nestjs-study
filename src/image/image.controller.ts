@@ -29,7 +29,7 @@ export class ImageController {
       },
     });
 
-    const uuid = Date.now;
+    const uuid = Date.now();
 
     const uploadPromises = files.map((file) => {
       const fileName = getUniqueFileName(file, uuid);
